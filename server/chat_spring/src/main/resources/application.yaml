@@ -1,8 +1,0 @@
-spring:
-  config:
-    import: "configserver:http://newkayak.iptime.org:8888"
-  application:
-    name: "SimpleSocket"
-  cloud:
-    config:
-      enabled: true
