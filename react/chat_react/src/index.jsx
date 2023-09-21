@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './assets/static/css/index.css';
-import App from './views/Main';
+import './assets/static/css/main.scss'
+import {Footer} from './component/layout/Footer'
+import {Header} from "./component/layout/Header";
+import {SideBar} from "./component/layout/SideBar";
+import Main from "views/Main";
+
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Main />
+    <div className={"top_wrap"}>
+        <Header/>
+        <div className={"inner_wrap"}>
+            <SideBar/>
+            <Main/>
+        </div>
+        <Footer/>
+    </div>
   </React.StrictMode>
 );
 
