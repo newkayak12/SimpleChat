@@ -1,0 +1,24 @@
+@mixin main-style {
+  .logo-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .logo{
+      width:100%;
+      aspect-ratio: 1 / 1;
+
+      animation-name:rotate;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+
+  @keyframes rotate{
+    100%{
+      transform:rotate(360deg);
+    }
+  }
+}

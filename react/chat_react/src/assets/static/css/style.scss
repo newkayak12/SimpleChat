@@ -15,6 +15,9 @@
   & .side_bar {
     @include side-bar-style;
   }
+  & .main .container {
+    @include main-style;
+  }
 }
 
 

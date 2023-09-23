@@ -2,13 +2,14 @@ import { createSlice } from '@reduxjs/toolkit'
 import reducers from "@/redux/reducer/layout";
 
 export const layouts = createSlice({
-    name: 'layouts',
+    name: 'layout',
     initialState: {
-        value: 0,
+        header:true,
+        footer:true
     },
     reducers
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = layouts.actions
+export const { showHeader, showFooter } = layouts.actions
 export default layouts.reducer

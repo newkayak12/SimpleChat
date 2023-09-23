@@ -5,11 +5,10 @@ import {Footer} from '@/component/layout/Footer'
 import {Header} from "@/component/layout/Header";
 import {SideBar} from "@/component/layout/SideBar";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Main from "@/views/Main";
 import {Provider} from "react-redux";
 import reportWebVitals from './reportWebVitals';
 import store from '@/redux/index.js';
-
+import {SIDE_BAR} from "@/constant";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,11 +19,16 @@ root.render(
                 <SideBar/>
                 <div className={"inner_wrap"}>
                     <Header/>
+
                     <Routes>
-                        <Route path={"/"} element={<Main/>} />
-                        <Route path={"/1"} element={<Main/>} />
-                        <Route path={"/2"} element={<Main/>} />
+                        {
+                            SIDE_BAR.map(elem => {
+                                const {path, component, title} = elem
+                                return <Route path={path} element={component} key={title} />
+                            })
+                        }
                     </Routes>
+
                     <Footer/>
                 </div>
             </div>

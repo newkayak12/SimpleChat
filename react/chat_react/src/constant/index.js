@@ -1,25 +1,22 @@
-
+import {Main} from '@/views/main/Main'
+import {Chat} from '@/views/chat/Chat'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-const { faSwatchbook } = fas
+const { faSwatchbook, faHeading, faCommenting } = fas
 
 
 export const SIDE_BAR = [
     {
-        title:'TEST',
+        title:'logo',
         path:'/',
-        icon: faSwatchbook,
-        iconColor: "red"
+        icon: faHeading,
+        iconColor: "red",
+        component: <Main/>
     },
     {
-        title:'TEST1',
-        path:'/1',
-        icon: faSwatchbook,
-        iconColor: "orange"
+        title:'chat',
+        path:'/chat',
+        icon: faCommenting,
+        iconColor: "orange",
+        component: <Chat/>
     },
-    {
-        title:'TEST2',
-        path:'/2',
-        icon: faSwatchbook,
-        iconColor: "green"
-    }
 ]
