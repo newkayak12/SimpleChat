@@ -1,25 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './assets/static/css/main.scss'
-import {Footer} from './component/layout/Footer'
-import {Header} from "./component/layout/Header";
-import {SideBar} from "./component/layout/SideBar";
-import Main from "views/Main";
-
-
+import '@/assets/static/css/main.scss'
+import {Footer} from '@/component/layout/Footer'
+import {Header} from "@/component/layout/Header";
+import {SideBar} from "@/component/layout/SideBar";
+import Main from "@/views/Main";
+import {Provider} from "react-redux";
 import reportWebVitals from './reportWebVitals';
-
+import store from '@/redux/index.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className={"top_wrap"}>
-        <Header/>
-        <div className={"inner_wrap"}>
+      <Provider store={store}>
+        <div className={"top_wrap"}>
             <SideBar/>
-            <Main/>
+            <div className={"inner_wrap"}>
+                <Header/>
+                <Main/>
+                <Footer/>
+            </div>
         </div>
-        <Footer/>
-    </div>
+      </Provider>
   </React.StrictMode>
 );
 
