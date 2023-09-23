@@ -1,0 +1,20 @@
+@import './abstract/modules';
+
+.mock {
+  margin:0 auto;
+  padding: 1rem;
+  h3 {
+    @include head-line-6;
+    text-align: center;
+  }
+}
+.top_wrap {
+  & .header {
+    @include header-style;
+  }
+  & .side_bar {
+    @include side-bar-style;
+  }
+}
+
+

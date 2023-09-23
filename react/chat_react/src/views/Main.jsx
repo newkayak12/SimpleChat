@@ -1,93 +1,13 @@
 
 function App() {
+    const mock = new Array(50).fill("TEST").map((val, idx) => (
+            <div key={idx}>{"Main"} {idx + 1}</div>
+    ))
   return (
       <>
         <div className={"main"} role={"main"}>
             <div className={"container"}>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
-                <div>MAIN</div>
+                {mock}
             </div>
         </div>
       </>
