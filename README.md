@@ -1,2 +1,2 @@
-#Simple Chat
+# Simple Chat
 Exercise react/ swiftUI/ Flutter
