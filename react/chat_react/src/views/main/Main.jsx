@@ -1,7 +1,7 @@
 import logo from '@/assets/static/images/logo.svg'
 import {memo, useEffect} from "react";
 import {useStore} from "react-redux";
-import {showHeader} from "@/redux/type/layout";
+import {showHeader} from "@/redux/actions/layout";
 
 export const Main = memo( () => {
     const store = useStore()

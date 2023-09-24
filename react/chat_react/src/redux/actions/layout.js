@@ -1,3 +1,2 @@
-export const FOOTER = 'layout/FOOTER'
-export const HEADER = 'layout/FOOTER'
-export const NAV = 'layout/FOOTER'
+import {layouts} from "@/redux/type/layout";
+export const  { showHeader, showFooter } = layouts.actions
