@@ -1,33 +1,40 @@
 import {useSelector, useStore} from "react-redux";
 import {showHeader} from "@/redux/actions/layout";
-import {append} from "@/redux/actions/chat";
-// import {
-//     initializeStomp,
-//     deInitializedStomp,
-//     send,
-// } from '@/constant/chat/stomp'
-import {useEffect} from "react";
+import {useEffect, useState, memo} from "react";
+import {initializeStomp, send, deInitializedStomp} from '@/constant/chat/StompManager'
+import {Input} from "@/views/chat/component/Input";
 
-export const Chat = () => {
-    let store = useStore()
+export const Chat = memo(() => {
 
     useEffect( ()=> {
-        store.dispatch(showHeader(true))
-    }, [])
+        (async () => {
+            store.dispatch(showHeader(true))
+            await initializeStomp(store)
+        })()
 
+        return () => {
+            (async () => {
+                await deInitializedStomp()
+            })()
+        }
+    }, [])//chatEffect
+    let store = useStore()
+    const msg = useSelector(state => state.chat.list)
+    const renderChat = () => {
 
-    const test = useSelector(state => state.chat.list)
-    const testMethod = (item) => store.dispatch(append(item))
+    }
 
     return (
         <>
             <div className={"main"} role={"main"}>
                 <div className={"container"}>
-                 <button onClick={()=>testMethod(Math.random())}>TEST</button>
-                    {test.map((elem,index )=> <p key={index}>{elem}</p>)}
+                        <div className={"chat_room"}>
+
+                        </div>
+                        <Input />
                 </div>
             </div>
         </>
     )
-}
+})
 

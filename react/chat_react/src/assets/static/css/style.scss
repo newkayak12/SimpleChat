@@ -17,6 +17,7 @@
   }
   & .main .container {
     @include main-style;
+    @include chat-style;
   }
 }
 

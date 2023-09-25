@@ -20,8 +20,3 @@ export const SIDE_BAR = [
         component: <Chat/>
     },
 ]
-export const CHAT = {
-    handshakeUrl: "ws://localhost:1000/ws",
-    subscribeUrl: "/subscribe",
-    publishUrl: "/send/message"
-}

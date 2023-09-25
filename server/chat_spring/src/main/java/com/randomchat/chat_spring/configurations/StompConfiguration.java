@@ -1,10 +1,13 @@
 package com.randomchat.chat_spring.configurations;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHeaders;
+import org.springframework.messaging.simp.SimpMessageType;
 import org.springframework.messaging.simp.config.ChannelRegistration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.messaging.simp.stomp.StompCommand;
@@ -14,17 +17,22 @@ import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBr
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
+import java.awt.*;
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 @Configuration(value = "stomp_config")
 @EnableWebSocketMessageBroker
 @Slf4j
+@RequiredArgsConstructor
 public class StompConfiguration implements WebSocketMessageBrokerConfigurer {
+    private final Interceptor interceptor;
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws").setAllowedOrigins("*");
-        registry.addEndpoint("/ws").setAllowedOrigins("*").withSockJS();
+        registry.addEndpoint("/ws").setAllowedOriginPatterns("*");
+        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
     }
 
     @Override
@@ -32,36 +40,8 @@ public class StompConfiguration implements WebSocketMessageBrokerConfigurer {
         registry.enableSimpleBroker("/subscribe");
         registry.setApplicationDestinationPrefixes("/send");
     }
-//    @Override
-//    public void configureClientInboundChannel(ChannelRegistration registration) {
-//       registration.interceptors(new ChannelInterceptor() {
-//           @Override
-//           public Message<?> preSend(Message<?> message, MessageChannel channel) {
-//
-//               StompHeaderAccessor stompHeaderAccessor = StompHeaderAccessor.wrap(message);
-//
-//               log.warn(" {} ", stompHeaderAccessor.getSessionId());
-//               log.warn(" {} ", stompHeaderAccessor.getShortLogMessage(message));
-//               if( stompHeaderAccessor.getCommand().equals(StompCommand.SUBSCRIBE) ) {
-//
-//                   return ChannelInterceptor.super.preSend(
-//                           new Message<Map<String,String>>() {
-//                               @Override
-//                               public Map<String,String> getPayload() {
-//                                   return Map.of("msg", "사용자가 입장했습니다.");
-//                               }
-//
-//                               @Override
-//                               public MessageHeaders getHeaders() {
-//
-//                                   return message.getHeaders();
-//                               }
-//                           },
-//                           channel
-//                   );
-//               }
-//               return ChannelInterceptor.super.preSend(message, channel);
-//           }
-//       });
-//    }
+    @Override
+    public void configureClientInboundChannel(ChannelRegistration registration) {
+       registration.interceptors( interceptor );
+    }
 }
