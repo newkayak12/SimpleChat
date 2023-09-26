@@ -5,7 +5,6 @@ export const Bubble = memo( ({chat} ) => {
     const {msg, type, uuid} = chat
 
     const UUID = useSelector(state => state.chat.UUID)
-    console.log(uuid === UUID)
     const renderBubble = () => {
         if( type === "MESSAGE") {
             return (

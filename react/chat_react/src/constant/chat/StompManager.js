@@ -40,6 +40,7 @@ const subscribe = () => {
                 console.log("MSG:::::",message)
                 const response = JSON.parse(message.body);
                 store.dispatch(append(response))
+                scrollDown()
             },
             {UUID:UUID}
         )
@@ -56,6 +57,7 @@ const publish = (msg = "") => {
         body:JSON.stringify(container),
         skipContentLengthHeader: true
     });
+    scrollDown()
 }
 
 export const initializeStomp =  async (storeObj) => {
@@ -65,4 +67,14 @@ export const initializeStomp =  async (storeObj) => {
 export const deInitializedStomp = async () => {
     if( client && client.connected && unsubscribe() && await disconnect() ) client = null;
 }
-export const send = (msg) => publish(msg)
+export const send = (msg) => {
+    if(!msg) return true
+    publish(msg)
+}
+
+const scrollDown = () => {
+    setTimeout(() => {
+        const bottom = document.getElementById("chat_box").scrollHeight
+        document.getElementById("chat_box").scrollTo({top:bottom})
+    }, 300)
+}
