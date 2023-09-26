@@ -5,6 +5,91 @@
       &::-webkit-scrollbar {
         display: none;
       }
+
+      & .message {
+        width: 100%;
+        padding: 1rem;
+        &.my {
+          & .bubble_container {
+            justify-content: end;
+            align-items: end;
+            & .bubble {
+              //margin-right: 1rem;
+              background-color: rgb(59, 132, 247);
+              border: 1px rgb(59, 132, 247) solid;
+
+              & .tail {
+                right: 0.2rem;
+                border-right: 0.5rem solid rgb(59, 132, 247) !important;
+              }
+            }
+          }
+        }
+        &.others {
+          & .bubble_container {
+            justify-content: center;
+            align-items: start;
+           & .bubble {
+             //margin-left: 1rem;
+             background-color: rgb(59,59,61);
+             border: 1px rgb(59,59,61) solid;
+             & .tail {
+               left: -0.8rem;
+               border-bottom: 0.5rem solid rgb(59,59,61) !important;
+             }
+           }
+          }
+        }
+
+        &.my,&.others {
+          & .bubble_container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem;
+            & .bubble {
+              position: relative;
+              padding: 1rem;
+              border-radius: 0.25rem;
+              max-width: 50%;
+              min-width: 10%;
+              color: white;
+              word-break: keep-all;
+
+              & .tail {
+                width: 0rem;
+                height: 0rem;
+                border-top: 0.5rem solid transparent;
+                border-left: 0.5rem solid transparent;
+                border-bottom: 0.5rem solid transparent;
+                border-right: 0.5rem solid transparent;
+                position: absolute;
+                top: 0rem;
+                rotate: 45deg;
+                transform: translateY(-80%);
+                &:after{
+                  content: "";
+                }
+              }
+            }
+            & .date {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+
+      }
+      & .notice {
+        p {
+          background-color: rgba(128, 128, 128, 0.8);
+          font-weight: bolder;
+          padding: 0.25rem;
+          font-size: 0.75rem;
+          color: white;
+          text-align: center;
+          marginp: 0.25rem 0rem;
+        }
+      }
     }
     .chat_input {
       display: flex;

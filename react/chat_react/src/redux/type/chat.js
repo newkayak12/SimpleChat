@@ -4,6 +4,7 @@ import reducers from "@/redux/reducer/chat";
 export const chat = createSlice({
     name: 'chat',
     initialState: {
+     UUID:'',
      list:[]
     },
     reducers

@@ -22,8 +22,9 @@ public class Interceptor implements ChannelInterceptor {
         @Override
         public Message<?> preSend(Message<?> message, MessageChannel channel) {
             StompHeaderAccessor stompHeaderAccessor = StompHeaderAccessor.wrap(message);
-            if( stompHeaderAccessor.getCommand().equals(StompCommand.SUBSCRIBE) ) {
 
+            log.warn("MSG :::: {}", stompHeaderAccessor.getMessage());
+            if( stompHeaderAccessor.getCommand().equals(StompCommand.SUBSCRIBE) ) {
                 Message<String> msg = new Message<String>() {
                     @Override
                     public String getPayload() {
@@ -48,6 +49,7 @@ public class Interceptor implements ChannelInterceptor {
                     }
                 };
                 channel.send(msg);
+
             }
 
             return message;
