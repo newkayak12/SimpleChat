@@ -21,6 +21,7 @@ public class MessageController {
     @MessageMapping(value = "/message")
     @SendTo("/subscribe")
     public String sendMessage(@Payload String payload) {
+        log.warn("MSG {}", payload);
        return payload;
     }
 }

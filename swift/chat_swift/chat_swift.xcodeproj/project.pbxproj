@@ -8,9 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		7E026EA22ABB245300551FC1 /* chat_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E026EA12ABB245300551FC1 /* chat_swiftApp.swift */; };
-		7E026EA42ABB245300551FC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E026EA32ABB245300551FC1 /* ContentView.swift */; };
+		7E026EA42ABB245300551FC1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E026EA32ABB245300551FC1 /* RootView.swift */; };
 		7E026EA62ABB245400551FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E026EA52ABB245400551FC1 /* Assets.xcassets */; };
 		7E026EA92ABB245400551FC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E026EA82ABB245400551FC1 /* Preview Assets.xcassets */; };
+		7E2B05A12AC569330065BD8B /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B05A02AC569330065BD8B /* ChatBubbleShape.swift */; };
+		7E2B05A32AC56BE90065BD8B /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B05A22AC56BE90065BD8B /* Direction.swift */; };
+		7E2B05A52AC56E1A0065BD8B /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B05A42AC56E1A0065BD8B /* Notice.swift */; };
+		7EB334FD2AC51C110057D672 /* StompManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB334FC2AC51C110057D672 /* StompManager.swift */; };
+		7EB4758C2AC539ED00EF5685 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4758B2AC539ED00EF5685 /* Url.swift */; };
+		7EB4758E2AC53D8500EF5685 /* MessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4758D2AC53D8500EF5685 /* MessageBody.swift */; };
+		7EB475922AC53E6200EF5685 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB475912AC53E6200EF5685 /* MessageType.swift */; };
+		7EB475942AC53F1700EF5685 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB475932AC53F1700EF5685 /* ChatViewModel.swift */; };
+		7EB475962AC5469700EF5685 /* DefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB475952AC5469700EF5685 /* DefaultKey.swift */; };
+		7EB475992AC54B0000EF5685 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB475982AC54B0000EF5685 /* OSLog.swift */; };
+		7EB4759F2AC54B4B00EF5685 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4759E2AC54B4B00EF5685 /* ChatView.swift */; };
+		7EB475A52AC553E100EF5685 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB475A42AC553E100EF5685 /* Bubble.swift */; };
+		7EB475A72AC553E600EF5685 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB475A62AC553E600EF5685 /* InputField.swift */; };
+		7EB475AA2AC5570600EF5685 /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB475A92AC5570600EF5685 /* UIColor+HexColor.swift */; };
 		9EBD4FF57A7F53FFC660B6D3 /* Pods_chat_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69BCD5123CB75E838413AE4 /* Pods_chat_swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,9 +32,23 @@
 		563ED54D0484D13544BAD8A2 /* Pods-chat_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chat_swift.release.xcconfig"; path = "Target Support Files/Pods-chat_swift/Pods-chat_swift.release.xcconfig"; sourceTree = "<group>"; };
 		7E026E9E2ABB245300551FC1 /* chat_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E026EA12ABB245300551FC1 /* chat_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat_swiftApp.swift; sourceTree = "<group>"; };
-		7E026EA32ABB245300551FC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7E026EA32ABB245300551FC1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		7E026EA52ABB245400551FC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E026EA82ABB245400551FC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7E2B05A02AC569330065BD8B /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
+		7E2B05A22AC56BE90065BD8B /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		7E2B05A42AC56E1A0065BD8B /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		7EB334FC2AC51C110057D672 /* StompManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StompManager.swift; sourceTree = "<group>"; };
+		7EB4758B2AC539ED00EF5685 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		7EB4758D2AC53D8500EF5685 /* MessageBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBody.swift; sourceTree = "<group>"; };
+		7EB475912AC53E6200EF5685 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		7EB475932AC53F1700EF5685 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		7EB475952AC5469700EF5685 /* DefaultKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKey.swift; sourceTree = "<group>"; };
+		7EB475982AC54B0000EF5685 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
+		7EB4759E2AC54B4B00EF5685 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		7EB475A42AC553E100EF5685 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		7EB475A62AC553E600EF5685 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		7EB475A92AC5570600EF5685 /* UIColor+HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
 		9AB80D5B5336E108348AC748 /* Pods-chat_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chat_swift.debug.xcconfig"; path = "Target Support Files/Pods-chat_swift/Pods-chat_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		A69BCD5123CB75E838413AE4 /* Pods_chat_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chat_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -51,7 +79,6 @@
 				9AB80D5B5336E108348AC748 /* Pods-chat_swift.debug.xcconfig */,
 				563ED54D0484D13544BAD8A2 /* Pods-chat_swift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -76,8 +103,14 @@
 		7E026EA02ABB245300551FC1 /* chat_swift */ = {
 			isa = PBXGroup;
 			children = (
+				7EB475A82AC556F000EF5685 /* Extension */,
+				7EB475A12AC553D400EF5685 /* Component */,
+				7EB4758F2AC53E4800EF5685 /* Common */,
+				7EB334FB2AC51BDB0057D672 /* View */,
+				7EB334FA2AC51BD60057D672 /* ViewModel */,
+				7EB334F92AC51BD10057D672 /* Service */,
+				7EB334F82AC51BC90057D672 /* Model */,
 				7E026EA12ABB245300551FC1 /* chat_swiftApp.swift */,
-				7E026EA32ABB245300551FC1 /* ContentView.swift */,
 				7E026EA52ABB245400551FC1 /* Assets.xcassets */,
 				7E026EA72ABB245400551FC1 /* Preview Content */,
 			);
@@ -90,6 +123,118 @@
 				7E026EA82ABB245400551FC1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7E2B059F2AC569270065BD8B /* BubbleAddOns */ = {
+			isa = PBXGroup;
+			children = (
+				7E2B05A02AC569330065BD8B /* ChatBubbleShape.swift */,
+			);
+			path = BubbleAddOns;
+			sourceTree = "<group>";
+		};
+		7EB334F82AC51BC90057D672 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EB4758D2AC53D8500EF5685 /* MessageBody.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7EB334F92AC51BD10057D672 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7EB334FC2AC51C110057D672 /* StompManager.swift */,
+				7EB4758B2AC539ED00EF5685 /* Url.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7EB334FA2AC51BD60057D672 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7EB4759D2AC54B3000EF5685 /* Chat */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7EB334FB2AC51BDB0057D672 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7EB4759C2AC54B2B00EF5685 /* Chat */,
+				7E026EA32ABB245300551FC1 /* RootView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7EB4758F2AC53E4800EF5685 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7EB475972AC54AFC00EF5685 /* Utils */,
+				7EB475902AC53E4C00EF5685 /* Enumerations */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7EB475902AC53E4C00EF5685 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				7EB475912AC53E6200EF5685 /* MessageType.swift */,
+				7EB475952AC5469700EF5685 /* DefaultKey.swift */,
+				7E2B05A22AC56BE90065BD8B /* Direction.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		7EB475972AC54AFC00EF5685 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7EB475982AC54B0000EF5685 /* OSLog.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7EB4759C2AC54B2B00EF5685 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7EB4759E2AC54B4B00EF5685 /* ChatView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		7EB4759D2AC54B3000EF5685 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7EB475932AC53F1700EF5685 /* ChatViewModel.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		7EB475A12AC553D400EF5685 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				7EB475A22AC553D800EF5685 /* Chat */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		7EB475A22AC553D800EF5685 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7E2B059F2AC569270065BD8B /* BubbleAddOns */,
+				7EB475A42AC553E100EF5685 /* Bubble.swift */,
+				7EB475A62AC553E600EF5685 /* InputField.swift */,
+				7E2B05A42AC56E1A0065BD8B /* Notice.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		7EB475A82AC556F000EF5685 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7EB475A92AC5570600EF5685 /* UIColor+HexColor.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,8 +351,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E026EA42ABB245300551FC1 /* ContentView.swift in Sources */,
+				7EB334FD2AC51C110057D672 /* StompManager.swift in Sources */,
+				7EB475962AC5469700EF5685 /* DefaultKey.swift in Sources */,
+				7EB4759F2AC54B4B00EF5685 /* ChatView.swift in Sources */,
+				7EB475942AC53F1700EF5685 /* ChatViewModel.swift in Sources */,
+				7E026EA42ABB245300551FC1 /* RootView.swift in Sources */,
+				7EB4758E2AC53D8500EF5685 /* MessageBody.swift in Sources */,
+				7EB475AA2AC5570600EF5685 /* UIColor+HexColor.swift in Sources */,
+				7EB475A72AC553E600EF5685 /* InputField.swift in Sources */,
+				7E2B05A32AC56BE90065BD8B /* Direction.swift in Sources */,
+				7E2B05A52AC56E1A0065BD8B /* Notice.swift in Sources */,
+				7EB475A52AC553E100EF5685 /* Bubble.swift in Sources */,
+				7E2B05A12AC569330065BD8B /* ChatBubbleShape.swift in Sources */,
+				7EB475922AC53E6200EF5685 /* MessageType.swift in Sources */,
 				7E026EA22ABB245300551FC1 /* chat_swiftApp.swift in Sources */,
+				7EB4758C2AC539ED00EF5685 /* Url.swift in Sources */,
+				7EB475992AC54B0000EF5685 /* OSLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,11 +499,13 @@
 				DEVELOPMENT_TEAM = NL7TARX6W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleChat;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,9 +513,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newkayak12.chat-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -370,11 +534,13 @@
 				DEVELOPMENT_TEAM = NL7TARX6W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleChat;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,9 +548,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newkayak12.chat-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

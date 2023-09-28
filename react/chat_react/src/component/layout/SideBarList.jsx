@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {memo, useMemo, useState} from "react";
+import {memo, useMemo} from "react";
 import {useNavigate, useLocation} from 'react-router-dom'
 export const SideBarList = memo(({title, path, icon, color}) => {
     const {pathname} = useLocation()

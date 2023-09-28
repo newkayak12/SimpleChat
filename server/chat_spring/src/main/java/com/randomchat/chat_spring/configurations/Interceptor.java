@@ -23,7 +23,6 @@ public class Interceptor implements ChannelInterceptor {
         public Message<?> preSend(Message<?> message, MessageChannel channel) {
             StompHeaderAccessor stompHeaderAccessor = StompHeaderAccessor.wrap(message);
 
-            log.warn("MSG :::: {}", stompHeaderAccessor.getMessage());
             if( stompHeaderAccessor.getCommand().equals(StompCommand.SUBSCRIBE) ) {
                 Message<String> msg = new Message<String>() {
                     @Override

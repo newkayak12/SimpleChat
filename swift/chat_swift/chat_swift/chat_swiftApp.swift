@@ -11,7 +11,8 @@ import SwiftUI
 struct chat_swiftApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(StompManager.shared)
         }
     }
 }
